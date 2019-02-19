@@ -1,0 +1,77 @@
+html {
+	background: url("/~frk11/1052/images/hw5background.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body {
+
+}
+ul {
+	background-color: #7A7F7F;
+	width: 200px;
+	margin: auto;
+
+}
+li {
+	background-color: #7A7F7F;
+	padding: 2px;
+
+}
+h1 {
+	background-color: #2A2F2F;
+	color: white;
+	padding: 5px;
+	text-align: center;
+}
+h2 {
+	background-color: #2A2F2F;
+	color: white;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1px;
+	width: 250px;
+}
+h3 {
+	color: white;
+}
+div#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1em #2A2F2F solid; 
+	width: 70%;
+	padding: .5em;
+}
+div#header {
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("/~frk11/1052/images/hw5header1.png") ;
+	background-color: #2A2F2F;
+	padding: 1em;
+	height: 90px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+div#main {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #7A7F7F;
+	width: 80%;
+	padding: 1em;
+}
+div.container {
+	background-color: #7A7F7F;
+	border: 0.25em #2A2F2F solid; 
+}
+div#footer {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #2A2F2F;
+	padding: 1em;
+	
+}
+
+#2A2F2F#625D5D#7A7F7F

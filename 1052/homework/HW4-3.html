@@ -1,0 +1,201 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title> HW4 Fonts Part 2 </title>
+		<meta name="keywords" content="fonts"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<style type="text/css">
+			html {
+			background-color: #625D5D;
+			}
+			body {
+				background-color: #625D5D;
+				margin-bottom: 3em;
+			}
+			aside.left {
+				position: relative;
+				float: left;
+				width: 10%;
+				height: 100%;
+				background: #7A7F7F;
+				top: 1em;
+				padding: 0.25em;
+				text-align: left;
+				border: 0.25em solid;
+				border-color: #2A2F2F;
+			}
+			section {
+				position: relative;
+				float: left;
+				width: 50%;
+				height: 100%;
+				background: #7A7F7F;
+				top: 1em;
+				padding: 0.25em;
+				margin-left: 14%;
+				text-align: left;
+				border: 0.25em solid;
+				border-color: #2A2F2F;
+			}
+			aside.right {
+				position: relative;
+				float: right;
+				width: 10%;
+				height: 100%;
+				background: #7A7F7F;
+				top: 1em;
+				padding: 0.25em;
+				text-align: left;
+				border: 0.25em solid;
+				border-color: #2A2F2F;
+			}
+			h1 {
+				color: white;
+				font-family: Ariel, sans-serif;
+			}
+			img {
+				margin: auto;
+				width: 100%;
+				height: 100%;
+			}
+			div#nav {
+				display: block;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				background-color: #2A2F2F;
+				padding: 1em;
+			}
+			a.nav {
+				background-color: #625D5D;
+				padding: 0.5em;
+				margin-right: 0.5em;
+				text-decoration: none;
+				color: white;
+			}
+			div.container {
+				width: 100%;
+				max-width: 100%;
+				text-align: center;
+				padding: 0;
+				margin: 0 auto;
+			canvas{
+				position: relative;
+			}
+			#canvas {
+				display: flex;
+				border: 2px solid #2A2F2F;
+				width: 90;
+				height: 96;
+				justify-content: center;
+				align-items: center;
+			}
+			<!-- #2A2F2F#625D5D#7A7F7F -->
+		</style>
+		<script>
+			<!-- canvas and context variables for drawing -->
+			var canvas;
+			var context;
+			<!-- Image holder for our animation -->
+			var spriteRecycle = new Image();
+			<!-- Sprite image frame variables -->
+			var sliceX = 0;
+			var sliceY = 0;
+			var sliceWidth = 90;
+			var sliceHeight = 96;
+			<!-- animation variable -->
+			var intervalRef;
+			<!-- initialize the canvas -->
+			function init() {
+			<!-- Set the button handlers -->
+			var btnStart = document.getElementById('start');
+			var btnStop = document.getElementById('stop');
+			btnStart.addEventListener('click',startAnimation,false);
+			btnStop.addEventListener('click',stopAnimation,false);
+			<!-- Retrieve reference to the canvas and context -->
+			canvas = document.getElementById('canvas');
+			context = canvas.getContext('2d');
+			<!-- Assign the source of our image -->
+			spriteRecycle.src = '/~frk11/1052/images/sprite_create.png';
+			}
+			<!-- Animate image based on slice -->
+			function animateSprite() {// Draw the image based on the current sprite slice
+			context.drawImage(spriteRecycle, sliceX, sliceY, sliceWidth, sliceHeight, 0, 0, 90, 96);
+			<!-- Increment the slice of the sprite -->
+			sliceX+=90;
+			<!-- Reset the slice to the first frame if needed -->
+			if (sliceX>=spriteRecycle.width) {
+			sliceX = 0;
+			}
+			}
+			<!-- Start the animation by setting an interval -->
+			function startAnimation() {
+			intervalRef = setInterval('animateSprite()',100);
+			if (intervalRef > 100) {
+				stopAnimation();
+			}
+			}
+
+			<!-- Stop the animation by clearing the interval set -->
+			function stopAnimation() {
+			clearInterval(intervalRef);
+			<!-- erase the canvas with clearRect -->
+			context.clearRect(0,0,90,96);
+			}
+			<!-- call the init function on page load -->
+			window.addEventListener('load',init,false);
+		
+		</script>
+		
+	</head>
+
+	<body>
+		<header>
+		<!-- Navigation menu -->
+		<div id="nav">
+			<h1> Generic Website </h1>
+			<nav> 
+				<a class="nav" href="/~frk11/1052/"> Index </a>
+				<a class="nav" href="HW4-1.pdf"> Typography Paper </a>
+				<a class="nav" href="HW4-2.html"> HW4-2 </a> 
+			</nav>
+		</div>
+		</header>
+		
+		<!-- Begin main body section -->
+		<div class="container">
+			<!-- Left body content -->
+			<aside class="left">
+				<h2> Animation </h2>
+				<button id="start">Start</button>
+				<button id="stop">Stop</button>
+			</aside>
+			
+			<!-- Main body content -->
+			<section>
+				<h2> General Section </h2>
+				<p> I thought I'd add my little animation I did for another class into this 
+					so that there is something to do on the page. </p>
+				<canvas id="canvas">
+					The Canvas element is not supported in this browser.
+				</canvas>
+				<p> It kind of works, but you can't stop it if you click start more than one time.
+					I never figured out how to manage that properly. </p>
+			</section>
+			
+			<!-- Right body content -->
+			<aside class="right"> 
+				<h2> Cat Section </h2>
+				<img src="/~frk11/1052/images/bullet_cat.jpg" />
+				<p> Enjoy a small picture of a cat flying in the air. </p> 
+			</aside>
+		</div>
+	</body>
+
+	<footer>
+		
+	</footer>
+</html>

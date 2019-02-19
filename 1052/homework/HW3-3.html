@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--Sample on Form Elements //-->
+
+<html lang="en">
+
+
+
+<head>
+
+<title>Forms</title>
+
+<style>
+	table {
+		width: 75%;
+		border-style: solid;
+		border-width: 2px;
+	}
+
+	td {
+		margin: auto;
+		width: 50%;
+		border: 1px solid;
+	}
+	p.color {
+		color: #663399;
+	}
+	code.color {
+		color: #663399;
+	}
+	
+</style>
+
+</head>
+
+
+
+<body>
+
+<h2>HTML Forms</h2>
+
+<h3>This is the general format for creating a form:</h3>
+
+   &lt;form&gt; <br />
+
+      <blockquote>
+
+         form element definitions<br />
+         
+         form element definitions<br />
+
+         form element definitions<br />
+
+      </blockquote>
+
+   &lt;/form&gt; 
+
+
+
+<h3> What are the different form elements?</h3>
+<table>
+
+   <tr><th>NAME</th> <th>PICTURE</th> <th>Tag and Attribute</th></tr>
+
+   <tr><td>Text Box</td> <td ><input type=text size=10></td> <td>&lt;input type=text&gt;</td></tr>
+
+   <tr><td>Generic Button</td> <td ><input type=button value="          "></td> <td>&lt;input type=button&gt;  </td>
+
+    <tr><td>Reset Button</td> <td ><input type=reset></td> <td>&lt;input type=reset&gt;</td></tr>
+
+   <tr><td>Check Box</td> <td ><input type=checkbox></td> <td>&lt;input type=checkbox&gt;</td></tr>
+
+   <tr><td>Radio button</td> <td > <input type=radio></td> <td>&lt;input type=radio&gt;</td></tr>
+
+   <tr><td>Text Area</td> <td ><textarea rows=2 cols=10>  </textarea></td> <td>&lt;textarea rows=2 cols=10&gt; &lt;/textarea&gt;</tr>
+
+   <tr><td>Pull Down Menu</td> <td ><select name=" "><option value="1">1</option> <option value="2">2</option> <option value="3">3</option> </select> </td> <td>&lt;select&gt; <br /> &lt;option&gt;  <br /> &lt; option&gt; <br />&lt; option&gt; <br />&lt;/select&gt;
+
+</table>
+
+
+
+
+
+<p>
+
+<b>Note:</b> The first four form elements are created by using the &lt;input&gt; tag
+
+with the respective <br />type attribute. The pull down menu and text area form elements are not created with the<br />
+
+&lt;input&gt; tag but use the &lt;select&gt; and &lt;textarea&gt; tag. <br />
+
+</p>
+
+
+
+<h2>How to put text in/on your form element.</h2>
+
+The textbox, generic button, reset button, check box and radio button all have a <b>value</b> attribute.<br />
+
+Let's look at how the value attribute works for each one.<br /><br />
+
+<b>Textbox:</b><br />
+
+<blockquote>
+
+   <code>Code:&nbsp; &lt;input type=text <code class="color"> value="Here is some text"</code> &gt;</code><br />
+
+   <code>Result</code>:&nbsp; <input type=text value="Here is some text"> <br />
+
+   You can see the text box displays the text that was assigned to the value attribute and the <br />
+
+   text box is sized accordingly.
+
+</blockquote>
+
+
+
+<b>Generic Button </b>
+
+<blockquote>
+
+   <code>Code:&nbsp; &lt;input type=button <code class="color"> value="Press Here"</code>&gt;</code> <br />
+
+   <code>Result</code>:&nbsp; <input type=button value="Press Here"> <br />
+
+   Here the top of the button shows the text:Press Here and the button is sized accordingly.<br />
+
+</blockquote>
+
+
+
+
+
+<b>Reset Button</b><br /><br />
+
+You can leave out the value attribute when you code the reset button and it automatically <br />
+
+will display the word Reset. It doesn't hurt if you decide to use it or even change the name that is <br />
+
+displayed - it won't change the button's action. The action of the reset button is predefined: it will <br />
+
+clear the user-entered data from the form elements.<br />
+
+<blockquote>
+
+   <code>Code: &nbsp; &lt;input type=reset  <code class="color"> value="Click to clear form"</code>&gt;</code><br />
+
+   <code>Result</code>:&nbsp; <input type=reset value="Click to clear form"> <br />
+
+</blockquote>
+
+
+
+<b>Check Box and Radio Button </b><br /><br />
+
+Both of these have a value attribute but their graphical representation is too small to display any text <br />
+
+strings. So, the value attribute can be used to store "hidden" data from the user. More on this later. <br />
+
+<br />
+
+<br />
+
+
+
+<b>Text Area </b> <br /><br />
+
+The Text Area form element is a little different. It is created by using the container tag &lt;textarea&gt; <br />
+
+It also requires a specification for the number of rows and columns. The initial display <br />
+
+of text in a text area comes from the text between the start and end textarea tags. 
+
+<blockquote>
+
+   <code>Code:&nbsp; &lt;textarea rows=3 cols=30&gt; <code class="color">Here is the displayed text</code>&lt;/textarea&gt; </code> <br />
+
+   <code>Result</code>:&nbsp; <textarea rows=3 cols=30> Here is the displayed text </textarea> <br />
+
+</blockquote>
+
+
+
+<b>Pull Down Menu</b> <br />
+
+The pull-down menu is created by using the &lt;select&gt; container tag. Within the <br />
+
+select tags a new tag is embedded called the &lt;option&gt; tag. The text immediately to the <br />
+
+right of each one of the option tags will be displayed. Each option tag creates a new <br />
+
+choice on the pulldown menu. An example can best demonstrate:<br />
+
+<blockquote>
+
+   <code>Code:<br /> &lt;select&gt; <br />&lt;option&gt; <code class="color">Choice1</code>&lt;/option&gt; <br /> &lt;option&gt; <code class="color">Choice2 </code>&lt;/option&gt;<br /> &lt;option&gt; <code class="color">Choice3</code>&lt;/option&gt;<br /> &lt;/select&gt;<br /><br /></code>
+
+   <code>Result:</code><select> <option>Choice1</option> <option> Choice2 </option> <option>Choice3</option> </select><br />
+
+</blockquote>
+
+
+
+<h2>How to layout your form elements and add titles.</h2>
+
+Which form elements you use is dependent upon the needs of your interface and what type<br />
+
+of information you want to display. For the most part ordinary text is used in the HTML document<br />
+
+to add titles to your form elements. Here is a sampling:
+
+
+
+<form>
+
+<b>Please enter your first name:</b> <input type=text size=30 value="Type name here"><br /><br />
+
+<b>Send us your comments:</b> <textarea row =5 cols =40> "Type your comments here"</textarea> <br /><br />
+
+<b>Choose your favorite colors:</b><br/>
+
+Blue<input type=checkbox>&nbsp;Green<input type=checkbox>Red&nbsp;<input type=checkbox><br /><br />
+
+<b>Please choose yes or no:</b> yes<input type=radio name=choice> no<input type=radio name=choice><br /><br />
+
+<b>Choose your state:</b><select><option>PA<option>NY<option>MD</select><br /><br />
+
+</form>
+
+<b>Press Here:</b><input type=button value="Press"><br /><br/>
+
+<b>Reset the form:</b><input type=reset><br /><br />
+
+
+
+
+
+
+
+<hr>
+
+<b>Here is partial html code for the above example:</b><br />
+
+
+
+<textarea rows=15 cols=75><b>Please enter your first name:</b> <input type=text size=30 value="Type name here"><br /><br />
+
+
+
+<b>Send us your comments:</b> &lt;textarea row =5 cols =40> "Type your comments here"&lt;/textarea> <br /><br />
+
+
+
+<b>Choose your favorite colors:</b><br/>
+
+Blue<input type=checkbox>&nbsp;Green<input type=checkbox>Red&nbsp;<input type=checkbox><br /><br />
+
+
+
+<b>Please choose yes or no:</b> yes<input type=radio name=choice> no<input type=radio name=choice><br /><br />
+
+
+
+<b>Choose your state:</b><select><option>PA<option>NY<option>MD</select><br /><br />
+
+
+
+<b>Press Here:<input type=button value="Press"><br /><br/>
+
+
+
+<b>Reset the form:</b><input type=reset><br /><br /> 
+
+
+
+</form><br />
+
+</textarea><br />
+
+
+
+<hr>
+
+<b>You can use a borderless table to better organize your form elements:</b><br />
+
+
+
+<table >
+
+   <tr><td>Enter your name&nbsp;<input type=text size=15></td> <td>Sex:Male<input type=radio name=choice>Female<input type=radio name=choice></td></tr>
+
+   <tr><td>Press Here &nbsp;&nbsp;<input type=button value="Press"></td><td>State:<select><option>PA<option>NY</select></td></tr>
+
+</table>
+
+<hr>
+
+
+
+<b>Here is partial html code for the above example:</b><br />
+
+<textarea rows=15 cols=75><table>
+
+   <tr><td>Enter your name&nbsp;<input type=text size=15></td>
+
+       <td>Sex:Male<input type=radio name=choice>Female
+
+           <input type=radio name=choice></td>
+
+   </tr>
+
+   <tr><td>Press Here &nbsp;&nbsp;<input type=button value="Press"></td>
+
+       <td>State:<select><option>PA<option>NY</select></td>
+
+   </tr>
+
+</textarea>
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

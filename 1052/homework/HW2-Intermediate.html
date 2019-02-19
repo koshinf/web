@@ -1,0 +1,143 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<!-- Meta content tells search browsers about your site; description, keywords, author -->
+		<meta name="keywords/description/author" content="keywords/description of site/author name"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+		<title> HW2 Intermediate </title>
+
+	</head>
+
+	<body>
+		<a href="/~frk11/1052/"> <--- Back to Index </a>
+		
+		<!-- Navigation specifically for moving to other parts of the same website -->	
+		<nav>
+		
+		</nav>
+
+		<!-- Div tags are for sectioning off different code content -->
+		<div id="noCSSdiv">
+
+			<!-- Span tag for in-line elements to section off, not used often (DON'T USE) -->
+			<p> Spanning into <span class="helpmeCSS"> spans </span> without CSS </p>
+
+			<!-- Primary heading tag that is used for titling content -->
+			<p> Here is some <em class="CCSclasshere"> emphasized </em> text. </p>
+
+			<!-- Mousing over the word LOL will show the full abbreviation -->
+			<p> <abbr title="Laugh Out Loud"> LOL </abbr> </p>
+
+			<!-- Quotations q for in-lne quotes, and blockquote for multi-line quotes -->
+			<p> There was this guy online that said once that quote, <q> traps are life </q>.
+			Truely these are good times we live in. </p>
+			
+			<!-- Figure is good way to easily caption who the quote is by and make the quote neater -->
+			<figure>
+				<blockquote cite="https://www.yeah.nolol/look/wait/no/">
+				<p> When using blockquotes you put the blockquote tag on the outside of the "p" tag.
+				As you can see the blockquote indents the text. </p>
+				</blockquote>
+				<figcaption> Hehe ye </figcaption>
+			</figure>
+
+			<!-- Citing -->
+
+			<!-- Code, variable, keyboard, and sample tags are used to put visable, unused, code into the site
+			vairables tell the HTML that text is considered a variable, keyboard -->
+			<p> A line of code with variable:
+
+			<!-- The preformatted text tag takes into account the whitespace used in the HTML --> 
+				<pre>
+					<code><var>wowVariable</var> = true; 
+					x = y + h;
+					for(x != h + y) {
+					    x = null;
+					}
+					</code>		
+				</pre>
+			</p>
+
+			<p> Some neat things are happening, but type <kbd> something here </kbd> and you get 
+			<samp> Nothing </samp> at all. </p>
+		</div>
+		
+		<!-- Tables are used mainly for displaying data, but have been used for formatting tag positions on the
+		site instead of CSS.  tr = table row, th = table header, td = table data/cell -->
+		<table>
+			<tr>
+				<th> Column 1 </th>
+				<th> Column 2 </th>
+				<th> Column 3 </th>
+			</tr>
+
+			<!-- colspan and rowspan merge nearby cells either horizontaly or verticaly respectively for 
+			the amount that is entered -->
+			<tr>
+				<td> Row 1 Cell 1 </td>
+				<td colspan="2"> Row 1 Cell 2, Spanning Row 1 Cell 3 </td>
+			</tr>
+			<tr>
+				<td rowspan="2"> Row 2 Cell 1, Spanning Row 3 Cell 1 </td>
+				<td> Row 2 Cell 2 </td>
+				<td> Row 2 Cell 3 </td>
+			</tr>
+			<tr>
+				<td> Row 3 Cell 2 </td>
+				<td> Row 3 Cell 3 </td>
+			</tr>
+		</table>
+
+		<!-- Description lists are a less useful form of list unlike unordered and ordered lists -->
+		<h2> Description lists </h2>
+		<dl>
+			<dt> HTML </dt>
+				<dd> A shortened name for the code used to make websites. </dd>
+			<dt> Phones </dt>
+				<dd> Used to make calls to people. </dd>
+				<dd> Landlines are basically unused these days. </dd>
+			<dt> Pants </dt>
+				<dd> Everyone wears them. </dd>
+				<dd> Almost. </dd>
+		</dl>
+		
+		<!-- Address tag used specifically for contacts -->
+		<h2> Address tag </h2>
+		<address>
+			<ul>
+				<li> PHONE: 123-421-5123 </li>
+				<li> NAME: Barcka Dopba </li>
+				<li> ADDRESS: 924 Newline Lane, XX, XXXXX </li>
+			</ul>
+		</address>
+
+		<!-- Definition is used like abbreviation, but for non abbreviated things -->
+		<p> The <dfn title="Strange tall cat">Horse</dfn> is normally seen on farms and ranches. </p>
+
+		<!-- Bi-directional text is used for languages that are read from right to left -->
+		<bdo dir="rtl"> <-- tfel txet sdrawkcab, forwards text right --> </bdo>
+
+		<!-- Insertion and Deletions are used for editorial purposes, doesn't have to be limited to text -->
+		<p> Here is some usage of <del datetime="2018-09-10">decreasing</del> and <ins cite="">increasing</ins>
+		the value of text in the sentence. </p>
+
+		<!-- Article used for sections of information such as a blog post, or newspaper page -->
+		<article>
+			<!-- Section is used to split up parts of an Article -->
+			<section id="prologue">
+				<p> Prologue </p>
+			</section>
+			<section id="main">
+				<p> Main content </p>
+			</section>
+		</article>
+			
+	</body>
+	<footer>
+	
+	</footer>
+</html>
